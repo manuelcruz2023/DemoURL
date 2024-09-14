@@ -1,12 +1,12 @@
 package co.edu.uptc;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -25,10 +25,10 @@ public class DemoUrl {
         // ObjectMapper om = new ObjectMapper();
         // Data data = om.readValue(sb.toString(), Data.class);
         // for (ArrayList element : data.data) {
-        //     for (Object elem : element) {
-        //         System.out.println(elem);
-        //     }
-        //     break;
+        // for (Object elem : element) {
+        // System.out.println(elem);
+        // }
+        // break;
         // }
         return sb.toString();
     }

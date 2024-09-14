@@ -6,10 +6,10 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Vehicle {
-    private String country;
-    private String city; 
-    private String state;
-    private String modelVehicle;
-    private String ManuFacturer;
-    private int electric;
+    private String country; //9
+    private String city; //10
+    private String state; //11
+    private String ManuFacturer; //14
+    private String modelVehicle; //15
+    private int electricRange; //18
 }
