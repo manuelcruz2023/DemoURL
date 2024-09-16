@@ -5,11 +5,15 @@ import java.net.URISyntaxException;
 
 public class Main {
     public static void main(String[] args) {
-        ExtractVehicles extractVehicles = new ExtractVehicles();
+        DemoUrl demo = new DemoUrl();
+        ExtractVehicles extract = new ExtractVehicles();
         try {
-            extractVehicles.createVehicleList();
-            extractVehicles.showVehicles();
-        } catch (URISyntaxException | IOException e) {
+            //String data = demo.ReadURL("https://data.wa.gov/api/views/f6w7-q2d2/rows.json?accessType=DOWNLOAD");  
+            demo.ReadData(demo.readTxt());
+            extract.createVehicleList();
+            extract.showVehicles();
+        } catch (IOException | URISyntaxException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

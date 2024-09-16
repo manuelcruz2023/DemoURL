@@ -3,11 +3,12 @@ package co.edu.uptc;
 import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Data{
+public class Data {
     public Meta meta;
     public ArrayList<ArrayList<Object>> data;
 }
-class Approval{
+
+class Approval {
     public int reviewedAt;
     public boolean reviewedAutomatically;
     public String state;
@@ -22,12 +23,12 @@ class Approval{
     public Submitter submitter;
 }
 
- class ClientContext{
+class ClientContext {
     public ArrayList<Object> clientContextVariables;
     public InheritedVariables inheritedVariables;
 }
 
- class Column{
+class Column {
     public int id;
     public String name;
     public String dataTypeName;
@@ -41,68 +42,68 @@ class Approval{
     public ComputationStrategy computationStrategy;
 }
 
- class ComputationStrategy{
+class ComputationStrategy {
     public ArrayList<String> source_columns;
     public String type;
     public Parameters parameters;
 }
 
- class CustomFields{
-    @JsonProperty("Temporal") 
+class CustomFields {
+    @JsonProperty("Temporal")
     public Temporal temporal;
-    @JsonProperty("Identification") 
+    @JsonProperty("Identification")
     public Identification identification;
-    @JsonProperty("Notes") 
+    @JsonProperty("Notes")
     public Notes notes;
 }
 
- class Format{
+class Format {
     public String align;
 }
 
- class Grant{
+class Grant {
     public boolean inherited;
     public String type;
     public ArrayList<String> flags;
 }
 
- class Identification{
-    @JsonProperty("Originator") 
+class Identification {
+    @JsonProperty("Originator")
     public String originator;
-    @JsonProperty("Metadata Language") 
+    @JsonProperty("Metadata Language")
     public String metadataLanguage;
 }
 
- class InheritedVariables{
+class InheritedVariables {
 }
 
- class License{
+class License {
     public String name;
     public String termsLink;
 }
 
- class Meta{
+class Meta {
     public View view;
 }
 
- class Metadata{
+class Metadata {
     public CustomFields custom_fields;
     public String rowLabel;
     public ArrayList<String> availableDisplayTypes;
 }
 
- class Notes{
-    @JsonProperty("1. ") 
-    public String _1 ;
-    @JsonProperty("2. ") 
-    public String _2 ;
-    @JsonProperty("3. ") 
-    public String _3 ;
-    @JsonProperty("4. ") 
-    public String _4 ;
+class Notes {
+    @JsonProperty("1. ")
+    public String _1;
+    @JsonProperty("2. ")
+    public String _2;
+    @JsonProperty("3. ")
+    public String _3;
+    @JsonProperty("4. ")
+    public String _4;
 }
 
- class Owner{
+class Owner {
     public String id;
     public String displayName;
     public String profileImageUrlLarge;
@@ -113,30 +114,29 @@ class Approval{
     public ArrayList<String> flags;
 }
 
- class Parameters{
+class Parameters {
     public String region;
     public String primary_key;
 }
 
- class Query{
+class Query {
 }
 
-
- class SubmissionDetails{
+class SubmissionDetails {
     public String permissionType;
 }
 
- class SubmissionOutcomeApplication{
+class SubmissionOutcomeApplication {
     public int failureCount;
     public String status;
 }
 
- class Submitter{
+class Submitter {
     public String id;
     public String displayName;
 }
 
- class TableAuthor{
+class TableAuthor {
     public String id;
     public String displayName;
     public String profileImageUrlLarge;
@@ -147,14 +147,14 @@ class Approval{
     public ArrayList<String> flags;
 }
 
- class Temporal{
-    @JsonProperty("Posting Frequency") 
+class Temporal {
+    @JsonProperty("Posting Frequency")
     public String postingFrequency;
-    @JsonProperty("Period of Time") 
+    @JsonProperty("Period of Time")
     public String periodofTime;
 }
 
- class View{
+class View {
     public String id;
     public String name;
     public String assetType;

@@ -1,7 +1,6 @@
 package co.edu.uptc;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
@@ -21,15 +20,18 @@ public class DemoUrl {
         while ((line = br.readLine()) != null) {
             sb.append(line);
         }
+        return sb.toString();
+    }
 
-        // ObjectMapper om = new ObjectMapper();
-        // Data data = om.readValue(sb.toString(), Data.class);
-        // for (ArrayList element : data.data) {
-        // for (Object elem : element) {
-        // System.out.println(elem);
-        // }
-        // break;
-        // }
+    public String readTxt() throws IOException {
+        BufferedReader br = new BufferedReader
+            (new InputStreamReader(getClass().getResourceAsStream
+                ("C://Users//juand//OneDrive//Documentos//vscode_Esteban//DemoURL//vehicles.txt")));
+        String line;
+        StringBuilder sb = new StringBuilder();
+        while ((line = br.readLine()) != null) {
+            sb.append(line);
+        }
         return sb.toString();
     }
 
